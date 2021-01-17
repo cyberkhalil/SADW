@@ -5,7 +5,7 @@ from psutil import virtual_memory, disk_usage
 
 
 def get_computer_name():
-    return lib.get_hostname
+    return lib.get_hostname()
 
 
 def get_processor():

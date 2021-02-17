@@ -1,0 +1,4 @@
+py-cpuinfo>=7
+psutil>=5
+distro>=1
+pyroute2>=0.5

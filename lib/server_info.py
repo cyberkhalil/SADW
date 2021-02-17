@@ -1,11 +1,6 @@
-#!/bin/python3
 import lib
 from cpuinfo import get_cpu_info
 from psutil import virtual_memory, disk_usage
-
-
-def get_computer_name():
-    return lib.get_hostname()
 
 
 def get_processor():

@@ -1,15 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "baseLayout.html" %}
+{% block content %}
+    <!-- Start Content -->
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <div class="about-me">
+        <div class="container">
 
-    <!-- <link href="/static/css/style.css" rel="stylesheet"> -->
-</head>
+            <div class="department">
+                <div class="dept">
+                    <ul>
+                        <li><i class="fa fa-list-alt" aria-hidden="true" style="padding-right: 7px;"></i>
+                            <a href="/">Dashpoard</a></li>
+                        <li><i class="fa fa-server" aria-hidden="true" style="padding-right: 7px;"></i>
+                            <a href="/ServerManager/LocalServer">Local Server</a></li>
+                        <li><i class="fa fa-list" aria-hidden="true" style="padding-right: 7px;"></i>
+                            <a href="#">All Server</a></li>
+                        <li><i class="fa fa-file" aria-hidden="true" style="padding-right: 7px;"></i>
+                            <a href="#">File and Storage Services</a></li>
+                    </ul>
 
-<body>
-    <img src="/static/ServerManager/LocalServer.png" />
-</body>
 
-</html>
+                </div>
+
+
+            </div>
+
+        </div>
+
+            <div class="info">
+                <div class="icon-info"><img src="/static/images/55.png"></div>
+                <h2>Properties</h2>
+                <p>for WIN-DTJA6RO2SUS</p>
+
+             <!-- Start Properties -->
+            <div class="properties">
+                <div class="prop-1">
+                 <!-- Start Content -->
+
+                <div class="prop-names">
+                 <ul>
+                     <li>Computer Name</a></li>
+                     <li>Domain</li>
+
+                 </ul>
+
+                 <br><br><br><br>
+                 <ul>
+                    <li>Windows Firewall</li>
+                    <li>Remote Managemnet</li>
+                    <li>Remote Desktop</li>
+                    <li>NIC Teaming</li>
+                    <li>Ethetnet</li>
+                </ul>
+
+                <br><br>
+                <ul>
+                 <li>OS Version</li>
+                 <li>Hardware Information</li>
+             </ul>
+
+
+
+                </div>
+
+                <div class="prop-values">
+                    <ul>
+                        <li><a href="#">DC01</a></li>
+                        <li>dc01.pc</li>
+                    </ul>
+                    <br><br><br><br>
+                    <ul>
+                       <li><a href="#">Private:On</a></li>
+                       <li><a href="#">Enabled</a></li>
+                       <li><a href="#">Disabled</a></li>
+                       <li><a href="#">Enabled</a></li>
+                       <li><a href="#">10.0.2.15, IPv6 enabled</a></li>
+                   </ul>
+
+                   <br><br>
+                   <ul>
+                    <li>MS Server 2012 R2</li>
+                    <li>VirtualBox</li>
+                </ul>
+
+                </div>
+                 <!-- End Content -->
+                </div>
+
+                <div class="prop-2">
+
+                <!-- Start Content2 -->
+
+                    <div class="prop-names">
+                        <ul>
+                            <li>Last Installed Updates</li>
+                            <li>Windows Update</li>
+                        </ul>
+
+                        <br><br><br><br>
+                        <ul>
+                           <li>Last Chek for Update</li>
+                           <li>Customer Experince Improvemnetn Program</li>
+                           <li>IE enhanced securty configration</li>
+                           <li>Time Zone</li>
+
+                       </ul>
+
+                       <br><br>
+                       <ul>
+                        <li>Processors</li>
+                        <li>Installed Memory</li>
+                        <li>Total dsik space</li>
+                    </ul>
+
+                    </div>
+
+                <div class="prop-values">
+                    <ul>
+                        <li><a href="#">Never</a></li>
+                        <li><a href="#">Off</a></li>
+                    </ul>
+                    <br><br><br><br>
+                    <ul>
+                       <li><a href="#">Never</a></li>
+                       <li><a href="#">Off</a></li>
+                       <li><a href="#">Not participting</a></li>
+                       <li><a href="#">On</a></li>
+                       <li>(UtC-08:00)Pacufuc Time(US&Canada)</li>
+                   </ul>
+
+                   <br><br>
+                   <ul>
+                    <li> {{cpu}}</li>
+                    <li>{{ram}}</li>
+                    <li>{{disk}}</li>
+                </ul>
+
+                </div>
+             <!-- End Content2 -->
+
+            </div>
+             <!-- End Properties -->
+
+        </div>
+    </div>
+
+
+        <!-- End Content -->
+ {% endblock %}

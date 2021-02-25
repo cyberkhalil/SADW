@@ -199,4 +199,4 @@ def WorkFolders_page():
 
 
 if __name__ == '__main__':
-    manager.run()
+    app.run()

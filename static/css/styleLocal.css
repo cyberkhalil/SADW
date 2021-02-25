@@ -1,0 +1,98 @@
+*{box-sizing: border-box;}
+
+/*Start Main Rulez */
+
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8F8F8; 
+    line-height: 1.5;
+    color: #444;
+}
+
+.container {
+    width :100%;
+    margin: auto;
+}
+
+.clearfix{clear:both;}
+
+/*End Main Rulez */
+
+/* Start Header */
+
+
+.header .navbar{
+    background-color: rgba(0, 0, 0, 0.705);
+    color: #FFF;
+    overflow: hidden;
+}
+
+
+.header .page-next { width: 170px; float:left; margin-top: 25px;margin-left:15px}
+
+.header .search {
+    padding-top: 25px;
+    float: left;
+}
+
+.header  input { width: 700px; height: 40px;}
+
+.header .search img { max-width: 4%;}
+
+.header .navbar ul {
+    list-style: none;
+    padding-left: 0;
+    overflow: hidden;
+    float: right;
+}
+
+.header .navbar ul li { float: left; padding:10px;}
+
+.header .navbar ul li a { color:#FFF; text-decoration: none;}
+
+.header .navbar ul li.active a, .header .navbar ul li a:hover {
+    color: #2ecc71;
+}
+
+/* End Header */
+
+
+/* Start Content */
+
+.about-me .department { float: left; width: 20%; border-right: 2px solid #CFCFCF;height: 1300px;overflow: hidden;}
+
+.about-me .department ul{list-style-type: none;}
+.about-me .department ul li {padding-bottom:10px;}
+.about-me .department ul li:hover {color: rgb(16, 27, 92);}
+.about-me .department ul li a:hover {color: rgb(16, 27, 92);}
+
+.about-me .department ul li:active {background-color: blue;}
+
+.about-me .department ul li a {text-decoration: none; color:rgba(0, 0, 0, 0.623)}
+
+.about-me .info { float: left; width: 80%;overflow: hidden;}
+
+.about-me .info .icon-info {width:100px ;float: left;}
+.about-me .info .icon-info img {max-width: 100%;}
+
+/* Start Properties */
+
+.about-me .properties { width:95%;margin-left: 3%; height:550px;border:1px solid #CFCFCF; }
+
+
+.about-me .properties .prop-1 {width:50%;float: left;height: 100%;}
+.about-me .properties .prop-1  .prop-names {width:50%;float: left;height: 100%;}
+
+.about-me .properties .prop-2 {height: 100%; margin-top: -10px;}
+.about-me .properties .prop-2  .prop-names {width:25%;float: left;height: 100%;}
+.about-me .properties .prop-2  .prop-values {height: 100%; padding-top: 10px;}
+
+.about-me .properties ul  {list-style-type: none;}
+
+
+.prop-values ul li a {
+    text-decoration:none;
+}
+
+/* End Properties */

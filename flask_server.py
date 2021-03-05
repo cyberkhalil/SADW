@@ -2,19 +2,7 @@
 from flask import Flask
 from flask_script import Manager
 
-from webscripts.ServerManager import AllServers, Dashboard, LocalServer, Login
-from webscripts.ServerManager.ActiveDirectoryDomainServicesConfigurationWizard import (
-    AdditionalOptions, DeploymentConfigurations, DNSOptions, Installation,
-    Paths, PrerequisitesCheck, ReviewOptions)
-from webscripts.ServerManager.AddRolesandFeturesWizard import (
-    ADLDS, Beforeyoubegin, Confirmation, DNSServer, Features, InstallationType,
-    Result, ServerRoles, ServerSelection)
-from webscripts.ServerManager.FileandStorageServices import (Disks, Servers,
-                                                             Shares,
-                                                             StoragePools,
-                                                             Volumes,
-                                                             WorkFolders,
-                                                             iSCSI)
+from webscripts.ServerManager import *
 
 app = Flask(__name__,
             template_folder='static/templates',  # static imgs/html/css
@@ -69,7 +57,12 @@ def DeploymentConfigurations_page():
 @app.route(addscw_path+'AdditionalOptions')
 def AdditionalOptions_page():
     """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/AdditionalOptions page is a page in the wizard."""
-    return AdditionalOptions.load_page()
+    return AdditionalOptions.load_page()@app.route(addscw_path+'AdditionalOptions')
+
+@app.route(addscw_path+'DomainControllerOptions')
+def DomainControllerOptions_page():
+    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/DomainControllerOptions page is a page in the wizard."""
+    return DomainControllerOptions.load_page()
 
 
 @app.route(addscw_path+'DNSOptions')

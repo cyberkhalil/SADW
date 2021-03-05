@@ -1,6 +1,7 @@
 # TODO make it distro generic
-import distro
 import os
+
+import distro
 
 
 def update():

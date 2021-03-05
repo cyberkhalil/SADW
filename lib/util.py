@@ -1,8 +1,8 @@
-from shutil import copyfile
-import socket
-import struct
 import fcntl
 import os
+import socket
+import struct
+from shutil import copyfile
 
 
 def get_hostname():

@@ -1,182 +1,178 @@
+ {% extends "baseLayout.html" %} {% block content %}
 
-{% extends "baseLayout.html" %}
+<!-- Start Content -->
 
-{% block content %}
+<div class="about-me">
+    <div class="container">
 
-    <!-- Start Content -->
-
-    <div class="about-me">
-        <div class="container">
-
-            <!--Start The right Side Deparment  -->
-            <div class="department">
-                <div class="dept">
-                    <ul>
-                        <li><i class="fa fa-list-alt" aria-hidden="true" style="padding-right: 7px;"></i>
-                            <a href="/">Dashpoard</a></li>
-                        <li><i class="fa fa-server" aria-hidden="true" style="padding-right: 7px;"></i>
-                            <a href="/ServerManager/LocalServer">Local Server</a></li>
-                        <li><i class="fa fa-list" aria-hidden="true" style="padding-right: 7px;"></i>
-                            <a href="#">All Server</a></li>
-                        <li><i class="fa fa-file" aria-hidden="true" style="padding-right: 7px;"></i>
-                            <a href="#">File and Storage Services</a></li>
-                    </ul>
-
-
-                </div>
+        <!--Start The right Side Deparment  -->
+        <div class="department">
+            <div class="dept">
+                <ul>
+                    <li><i class="fa fa-list-alt" aria-hidden="true" style="padding-right: 7px;"></i>
+                        <a href="/">Dashpoard</a></li>
+                    <li><i class="fa fa-server" aria-hidden="true" style="padding-right: 7px;"></i>
+                        <a href="/ServerManager/LocalServer">Local Server</a></li>
+                    <li><i class="fa fa-list" aria-hidden="true" style="padding-right: 7px;"></i>
+                        <a href="#">All Server</a></li>
+                    <li><i class="fa fa-file" aria-hidden="true" style="padding-right: 7px;"></i>
+                        <a href="#">File and Storage Services</a></li>
+                </ul>
 
 
             </div>
+
 
         </div>
 
-
-
-        <!--End The right Side Deparment  -->
-
-
-        <!-- Start Info in Another side -->
-
-        <div class="info">
-            <h2>Welcome To Server Manager</h2>
-            <div class="config">
-                <div class="thum1">
-                    <p>QUICK START</p>
-
-                </div>
-
-                <div class="thum">
-                    <p>What's new</p>
-
-                </div>
-
-                <div class="thum">
-                    <p>Learn More</p>
-
-                </div>
-
-                <div class="description">
-                    <img src="/static/images/11.png">
-                    <div class="h-img">
-                        <h2><a href="#">Configure this local server</a></h2>
-                    </div>
-                </div>
-                <!-- Start Roles -->
-
-                <div class="desc">
-                    <img src="/static/images/22.png">
-                    <div class="desc-h">
-                        <h2><a href="#">Add Roles and features</a></h2>
-                    </div>
-
-                    <div class="desc2">
-                        <img src="/static/images/33.png">
-                        <div class="desc-h">
-                            <h2><a href="#">Add other server to manage</a></h2>
-                        </div>
-
-                        <div class="desc3">
-                            <img src="/static/images/44.png">
-                            <div class="desc-h">
-                                <h2><a href="#">Create a server group</a></h2>
-                            </div>
-
-                            <!-- End Roles -->
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Start All Server -->
-
-            <div class="rules">
-                <h2>Roles And Server Groups</h2>
-                <div class="sub-rules">Roles : 1</div>
-                <div class="sub-rules">Server group : 1</div>
-                <div class="sub-rules3">Server total : 1</div>
-
-
-            </div>
-
-            <div class="storage">
-
-                <div class="sub-server-1">
-                    <h2>File and Storage Services</h2>
-                    <div class="sub-img"><i class="fa fa-file fa-2x" aria-hidden="true" style="margin-top: 10px;"></i>
-                    </div>
-
-                </div>
-
-
-                <ul>
-                    <li><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true" style="padding-right: 7px;margin-left: -20px;margin-top: 5px;color: rgb(46, 196, 41);"></i>
-                        <a href="#">Manageability</a></li>
-                    <li> <a class="stor" href="#">Events</a></li>
-                    <li> <a class="stor" href="#">Performance </a></li>
-                    <li> <a class="stor" href="#">BPA results</a></li>
-                </ul>
-
-
-
-            </div>
-
-            <div class="server">
-                <div class="sub-server">
-                    <h2>Local Server</h2>
-                    <div class="sub-img"><i class="fa fa-server fa-2x" aria-hidden="true"
-                            style="color: #FFF;margin-top: 18px;margin-left: 10px;"></i></div>
-
-
-                </div>
-
-
-
-
-                <ul>
-                    <li><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true" style="padding-right: 7px;margin-left: -20px;margin-top: 5px;color: rgb(46, 196, 41);"></i>
-                        <a href="#">Manageability</a></li>
-                    <li> <a class="stor" href="#">Events</a></li>
-                    <li> <a class="stor" href="#">Services</a></li>
-                    <li> <a class="stor" href="#">Performance </a></li>
-                    <li> <a class="stor" href="#">BPA results</a></li>
-                </ul>
-
-
-
-
-            </div>
-
-
-            <div class="all-server">
-                <div class="sub-server">
-                    <h2>All Servers</h2>
-                    <div class="sub-img"> <i class="fa fa-list fa-2x" aria-hidden="true" style="color: #FFF;margin-top: 18px;margin-left: 10px;"></i></div>
-
-                </div>
-
-
-                <ul>
-                    <li><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true" style="padding-right: 7px;margin-left: -20px;margin-top: 5px;color: rgb(46, 196, 41);"></i>
-                        <a href="#">Manageability</a></li>
-                    <li> <a class="stor" href="#">Events</a></li>
-                    <li> <a class="stor" href="#">Services</a></li>
-                    <li> <a class="stor" href="#">Performance </a></li>
-                    <li> <a class="stor" href="#">BPA results</a></li>
-                </ul>
-
-
-
-            </div>
-
-        </div>
     </div>
-    <!-- End All Server -->
 
 
-    <!-- End Info in Another side -->
 
-    <!-- End Content -->
+    <!--End The right Side Deparment  -->
+
+
+    <!-- Start Info in Another side -->
+
+    <div class="info">
+        <h2>Welcome To Server Manager</h2>
+        <div class="config">
+            <div class="thum1">
+                <p>QUICK START</p>
+
+            </div>
+
+            <div class="thum">
+                <p>What's new</p>
+
+            </div>
+
+            <div class="thum">
+                <p>Learn More</p>
+
+            </div>
+
+            <div class="description">
+                <img src="/static/images/11.png">
+                <div class="h-img">
+                    <h2><a href="#">Configure this local server</a></h2>
+                </div>
+            </div>
+            <!-- Start Roles -->
+
+            <div class="desc">
+                <img src="/static/images/22.png">
+                <div class="desc-h">
+                    <h2><a href="#">Add Roles and features</a></h2>
+                </div>
+
+                <div class="desc2">
+                    <img src="/static/images/33.png">
+                    <div class="desc-h">
+                        <h2><a href="#">Add other server to manage</a></h2>
+                    </div>
+
+                    <div class="desc3">
+                        <img src="/static/images/44.png">
+                        <div class="desc-h">
+                            <h2><a href="#">Create a server group</a></h2>
+                        </div>
+
+                        <!-- End Roles -->
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Start All Server -->
+
+        <div class="rules">
+            <h2>Roles And Server Groups</h2>
+            <div class="sub-rules">Roles : 1</div>
+            <div class="sub-rules">Server group : 1</div>
+            <div class="sub-rules3">Server total : 1</div>
+
+
+        </div>
+
+        <div class="storage">
+
+            <div class="sub-server-1">
+                <h2>File and Storage Services</h2>
+                <div class="sub-img"><i class="fa fa-file fa-2x" aria-hidden="true" style="margin-top: 10px;"></i>
+                </div>
+
+            </div>
+
+
+            <ul>
+                <li><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true" style="padding-right: 7px;margin-left: -20px;margin-top: 5px;color: rgb(46, 196, 41);"></i>
+                    <a href="#">Manageability</a></li>
+                <li> <a class="stor" href="#">Events</a></li>
+                <li> <a class="stor" href="#">Performance </a></li>
+                <li> <a class="stor" href="#">BPA results</a></li>
+            </ul>
+
+
+
+        </div>
+
+        <div class="server">
+            <div class="sub-server">
+                <h2>Local Server</h2>
+                <div class="sub-img"><i class="fa fa-server fa-2x" aria-hidden="true" style="color: #FFF;margin-top: 18px;margin-left: 10px;"></i></div>
+
+
+            </div>
+
+
+
+
+            <ul>
+                <li><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true" style="padding-right: 7px;margin-left: -20px;margin-top: 5px;color: rgb(46, 196, 41);"></i>
+                    <a href="#">Manageability</a></li>
+                <li> <a class="stor" href="#">Events</a></li>
+                <li> <a class="stor" href="#">Services</a></li>
+                <li> <a class="stor" href="#">Performance </a></li>
+                <li> <a class="stor" href="#">BPA results</a></li>
+            </ul>
+
+
+
+
+        </div>
+
+
+        <div class="all-server">
+            <div class="sub-server">
+                <h2>All Servers</h2>
+                <div class="sub-img"> <i class="fa fa-list fa-2x" aria-hidden="true" style="color: #FFF;margin-top: 18px;margin-left: 10px;"></i></div>
+
+            </div>
+
+
+            <ul>
+                <li><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true" style="padding-right: 7px;margin-left: -20px;margin-top: 5px;color: rgb(46, 196, 41);"></i>
+                    <a href="#">Manageability</a></li>
+                <li> <a class="stor" href="#">Events</a></li>
+                <li> <a class="stor" href="#">Services</a></li>
+                <li> <a class="stor" href="#">Performance </a></li>
+                <li> <a class="stor" href="#">BPA results</a></li>
+            </ul>
+
+
+
+        </div>
+
+    </div>
+</div>
+<!-- End All Server -->
+
+
+<!-- End Info in Another side -->
+
+<!-- End Content -->
 {% endblock %}

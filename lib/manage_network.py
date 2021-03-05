@@ -1,11 +1,10 @@
-import ipaddress
 import socket
-import netifaces
+
 import psutil
-import libnl
-from pyroute2 import IPDB
+
 
 def get_interfaces():
+    import netifaces
     return netifaces.interfaces()
 
 '''
@@ -17,14 +16,14 @@ def getAllInterfaces():
 def iface_isup(iface):
     return psutil.net_if_stats()[iface][0]
 
-def get_IP(iface):
+def get_IP(iface='enp0s3'):
     return psutil.net_if_addrs()[iface][0][1]
-
 
 
 # check if valid ip in network
 
 def is_in_network(ip,network):
+    import ipaddress
     if not(is_valid_ipv6_address(ip)) and not(is_valid_ipv4_address(ip)):
         return "invalid address"
     net = ipaddress.ip_network(network)
@@ -56,6 +55,7 @@ def is_valid_ipv6_address(address):
 TODO: set ip
 
 def set_IP(iface, ip, mask='24'):
+    from pyroute2 import IPDB
     # TODO use iface
     ipdb = IPDB()
     with ipdb.interfaces.enp0s3 as enp0s3:
@@ -63,17 +63,15 @@ def set_IP(iface, ip, mask='24'):
     ipdb.release()
 '''
 
-from pyroute2 import IPDB
-from pyroute2 import IPRoute
 
-
-def set_IP():
+def set_IP(ifname='enp0s3',address='172.24.6.88',mask=16):
     from pyroute2 import IPRoute
     ip = IPRoute()
-    index = ip.link_lookup(ifname='wlo1')[0]
-    ip.addr('add', index, address='172.24.6.88', mask=16)
+    index = ip.link_lookup(ifname=ifname)[0]
+    ip.addr('add', index, address=address, mask=mask)
     ip.close()
 
-print(get_IP('wlo1'))
-print(set_IP())
-print(get_IP('wlo1'))
+"""
+## Testing 
+print(get_IP())
+"""

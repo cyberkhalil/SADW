@@ -2,6 +2,7 @@
 from flask import render_template
 from lib.server_info import *
 
+
 def load_page():
     cpu = get_processor()
     ram = get_total_ram()

@@ -1,10 +1,20 @@
 #!/bin/python3
 from flask import Flask
 from flask_script import Manager
-from webscripts.ServerManager import Login, LocalServer, Dashboard, AllServers
-from webscripts.ServerManager.ActiveDirectoryDomainServicesConfigurationWizard import AdditionalOptions, DeploymentConfigurations, DNSOptions, Installation, Paths, PrerequisitesCheck, ReviewOptions
-from webscripts.ServerManager.AddRolesandFeturesWizard import Beforeyoubegin, ADLDS, Confirmation, DNSServer, Features, InstallationType, Result, ServerRoles, ServerSelection
-from webscripts.ServerManager.FileandStorageServices import Disks, iSCSI, Servers, Shares, StoragePools, Volumes, WorkFolders
+
+from webscripts.ServerManager import AllServers, Dashboard, LocalServer, Login
+from webscripts.ServerManager.ActiveDirectoryDomainServicesConfigurationWizard import (
+    AdditionalOptions, DeploymentConfigurations, DNSOptions, Installation,
+    Paths, PrerequisitesCheck, ReviewOptions)
+from webscripts.ServerManager.AddRolesandFeturesWizard import (
+    ADLDS, Beforeyoubegin, Confirmation, DNSServer, Features, InstallationType,
+    Result, ServerRoles, ServerSelection)
+from webscripts.ServerManager.FileandStorageServices import (Disks, Servers,
+                                                             Shares,
+                                                             StoragePools,
+                                                             Volumes,
+                                                             WorkFolders,
+                                                             iSCSI)
 
 app = Flask(__name__,
             template_folder='static/templates',  # static imgs/html/css

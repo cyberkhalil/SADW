@@ -1,5 +1,6 @@
 #!/bin/python3
 import os
+
 from lib import manage_distro, util
 
 # update distro

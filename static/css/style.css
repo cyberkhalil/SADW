@@ -1,44 +1,59 @@
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
+
 
 /*Start Main Rulez */
 
 body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F8F8F8; 
+    background-color: #F8F8F8;
     line-height: 1.5;
     color: #555;
 }
 
 .container {
-    width :100%;
+    width: 100%;
     margin: auto;
 }
 
-.clearfix{clear:both;}
+.clearfix {
+    clear: both;
+}
+
 
 /*End Main Rulez */
 
+
 /* Start Header */
 
-
-.header .navbar{
+.header .navbar {
     background-color: #414141;
     color: #FFF;
     overflow: hidden;
 }
 
-
-.header .page-next { width: 170px; float:left; margin-top: 25px;margin-left:15px}
+.header .page-next {
+    width: 170px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 15px
+}
 
 .header .search {
     padding-top: 25px;
     float: left;
 }
 
-.header  input { width: 700px; height: 40px;}
+.header input {
+    width: 700px;
+    height: 40px;
+}
 
-.header .search img { max-width: 4%;}
+.header .search img {
+    max-width: 4%;
+}
 
 .header .navbar ul {
     list-style: none;
@@ -47,56 +62,94 @@ body {
     float: right;
 }
 
-.header .navbar ul li { float: left; padding:10px;}
+.header .navbar ul li {
+    float: left;
+    padding: 10px;
+}
 
-.header .navbar ul li a { color:#FFF; text-decoration: none;}
+.header .navbar ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
 
-.header .navbar ul li.active a, .header .navbar ul li a:hover {
+.header .navbar ul li.active a,
+.header .navbar ul li a:hover {
     color: #2ecc71;
 }
+
 
 /* End Header */
 
 
 /* Start Content */
 
-.about-me .department { float: left; width: 20%; border-right: 2px solid #CFCFCF;height: 1300px;overflow: hidden;}
+.about-me .department {
+    float: left;
+    width: 20%;
+    border-right: 2px solid #CFCFCF;
+    height: 1300px;
+    overflow: hidden;
+}
 
-.about-me .department ul{list-style-type: none;}
-.about-me .department ul li {padding-bottom:10px;}
-.about-me .department ul li:hover {color: rgb(16, 27, 92);}
-.about-me .department ul li a:hover {color: rgb(16, 27, 92);}
+.about-me .department ul {
+    list-style-type: none;
+}
 
-.about-me .department ul li:active {background-color: blue;}
+.about-me .department ul li {
+    padding-bottom: 10px;
+}
 
-.about-me .department ul li a {text-decoration: none; color:rgba(0, 0, 0, 0.623)}
+.about-me .department ul li:hover {
+    color: rgb(16, 27, 92);
+}
 
+.about-me .department ul li a:hover {
+    color: rgb(16, 27, 92);
+}
 
-.about-me .info { float: left; width: 80%;overflow: hidden;}
+.about-me .department ul li:active {
+    background-color: blue;
+}
 
-.about-me .info > h2 {margin-left: 77px;}
+.about-me .department ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.623)
+}
+
+.about-me .info {
+    float: left;
+    width: 80%;
+    overflow: hidden;
+}
+
+.about-me .info>h2 {
+    margin-left: 77px;
+}
+
 .about-me .config {
-     width:85%;
-      height:368px;
-     border:1px solid #AFAFAF;
-     background-color: rgba(255, 255, 255, 0.986);
-     margin:auto
-     }
+    width: 85%;
+    height: 368px;
+    border: 1px solid #AFAFAF;
+    background-color: rgba(255, 255, 255, 0.986);
+    margin: auto
+}
 
-.about-me .config:hover {border:solid 2px rgba(0, 0, 0, 0.534)}
+.about-me .config:hover {
+    border: solid 2px rgba(0, 0, 0, 0.534)
+}
 
-
-.about-me .config .thum1{
-	margin: 0;
-	width: 15%;
-	margin-top: 0;
-	height: 120px;
-    border:1px solid;
+.about-me .config .thum1 {
+    margin: 0;
+    width: 15%;
+    margin-top: 0;
+    height: 120px;
+    border: 1px solid;
     background-color: #F26522;
     margin-top: 1px;
     margin-left: 1px;
 }
-.about-me .config .thum1 p{
+
+.about-me .config .thum1 p {
     padding-top: 65px;
     font-weight: 20px;
     font-size: 19px;
@@ -104,22 +157,20 @@ body {
     color: #FDF0F0;
     text-transform: uppercase;
     padding-left: 3px;
-    
 }
 
-
-.about-me .config .thum{
-	
-	margin: 0;
-	width: 15%;
-	margin-top: 0;
-	height: 120px;
-    border:1px solid;
-    background-color:#FFB343;
+.about-me .config .thum {
+    margin: 0;
+    width: 15%;
+    margin-top: 0;
+    height: 120px;
+    border: 1px solid;
+    background-color: #FFB343;
     margin-top: 2px;
     margin-left: 1px;
 }
-.about-me .config .thum p{
+
+.about-me .config .thum p {
     padding-top: 65px;
     font-weight: 20px;
     font-size: 19px;
@@ -129,9 +180,8 @@ body {
     padding-left: 3px;
 }
 
-.about-me .config .thum:hover  {
+.about-me .config .thum:hover {
     background-color: #F26522;
-
 }
 
 .about-me .config .description {
@@ -140,28 +190,60 @@ body {
     margin-left: 150px;
 }
 
-.about-me .config .description img {max-width: 100%;}
+.about-me .config .description img {
+    max-width: 100%;
+}
 
-.about-me .config .description .h-img { margin-top: -58px; width: 350px; margin-left: 55px;}
-.about-me .config .description .h-img > h2{font-size: 17px;color: rgba(10, 10, 175, 0.678);font-size: 20px;}
+.about-me .config .description .h-img {
+    margin-top: -58px;
+    width: 350px;
+    margin-left: 55px;
+}
+
+.about-me .config .description .h-img>h2 {
+    font-size: 17px;
+    color: rgba(10, 10, 175, 0.678);
+    font-size: 20px;
+}
 
 
 /* Start Rules in Content */
+
 .about-me .config .desc {
     width: 30px;
     margin-left: 200px;
-    
 }
 
-.about-me .config .desc img { max-width: 100%; background-color: #F0F0F0;border-radius: 30px;}
-.about-me .config .desc .desc-h { margin-top: -43px; width: 350px; margin-left: 45px;}
-.about-me .config .desc .desc-h > h2{font-size: 14px;}
+.about-me .config .desc img {
+    max-width: 100%;
+    background-color: #F0F0F0;
+    border-radius: 30px;
+}
 
+.about-me .config .desc .desc-h {
+    margin-top: -43px;
+    width: 350px;
+    margin-left: 45px;
+}
 
-.about-me .config .description , .desc-h ,  h2 a {text-decoration: none; color: rgba(10, 10, 175, 0.678);}
-.about-me .config .description   h2 a:hover{border-bottom: 1px solid rgba(10, 10, 175, 0.678) ; }
-.about-me .config .desc   h2 a:hover{border-bottom: 1px solid rgba(10, 10, 175, 0.678); }
+.about-me .config .desc .desc-h>h2 {
+    font-size: 14px;
+}
 
+.about-me .config .description,
+.desc-h,
+h2 a {
+    text-decoration: none;
+    color: rgba(10, 10, 175, 0.678);
+}
+
+.about-me .config .description h2 a:hover {
+    border-bottom: 1px solid rgba(10, 10, 175, 0.678);
+}
+
+.about-me .config .desc h2 a:hover {
+    border-bottom: 1px solid rgba(10, 10, 175, 0.678);
+}
 
 .about-me .config .desc2 {
     width: 30px;
@@ -169,10 +251,20 @@ body {
     margin-top: 20px;
 }
 
-.about-me .config .desc2 img { max-width: 100%;}
-.about-me .config .desc .desc-h { margin-top: -43px; width: 350px; margin-left: 45px;}
-.about-me .config .desc-h > h2{font-size: 14px; color: rgba(10, 10, 175, 0.678)}
+.about-me .config .desc2 img {
+    max-width: 100%;
+}
 
+.about-me .config .desc .desc-h {
+    margin-top: -43px;
+    width: 350px;
+    margin-left: 45px;
+}
+
+.about-me .config .desc-h>h2 {
+    font-size: 14px;
+    color: rgba(10, 10, 175, 0.678)
+}
 
 .about-me .config .desc3 {
     width: 30px;
@@ -180,13 +272,28 @@ body {
     margin-top: 20px;
 }
 
-.about-me .config .desc3 img { max-width: 100%;}
-.about-me .config .desc .desc-h { margin-top: -43px; width: 350px; margin-left: 45px;}
-.about-me .config .desc .desc-h > h2{font-size: 14px;}
+.about-me .config .desc3 img {
+    max-width: 100%;
+}
+
+.about-me .config .desc .desc-h {
+    margin-top: -43px;
+    width: 350px;
+    margin-left: 45px;
+}
+
+.about-me .config .desc .desc-h>h2 {
+    font-size: 14px;
+}
+
 
 /* subRoles  */
-.about-me .rules { height: 80px;margin-left: 8%;font-size: 12px;}
 
+.about-me .rules {
+    height: 80px;
+    margin-left: 8%;
+    font-size: 12px;
+}
 
 .about-me .rules .sub-rules {
     float: left;
@@ -201,90 +308,165 @@ body {
     margin-right: 10px;
 }
 
+
 /* End subRoles  */
 
 
 /* End  Roles in Content */
 
+
 /* <!-- Start All Server --> */
 
-.about-me  .storage {width:33%; height:350px;border:1px solid #CFCFCF ;float: left;margin-right: 20px;margin-left: 8%;}
-.about-me  .storage:hover{border: 1px solid rgba(0, 0, 0, 0.575);}
+.about-me .storage {
+    width: 33%;
+    height: 350px;
+    border: 1px solid #CFCFCF;
+    float: left;
+    margin-right: 20px;
+    margin-left: 8%;
+}
 
+.about-me .storage:hover {
+    border: 1px solid rgba(0, 0, 0, 0.575);
+}
 
-.about-me .server {width:33%; height:350px;border:1px solid #CFCFCF;float: left;}
-.about-me  .server:hover{border: 1px solid rgba(0, 0, 0, 0.575);}
+.about-me .server {
+    width: 33%;
+    height: 350px;
+    border: 1px solid #CFCFCF;
+    float: left;
+}
 
+.about-me .server:hover {
+    border: 1px solid rgba(0, 0, 0, 0.575);
+}
 
-.about-me .all-server {width:33%;height:350px;border:1px solid #CFCFCF;float: left;margin-top: 20px;margin-left: 8%;}
-.about-me  .all-server:hover{border: 1px solid rgba(0, 0, 0, 0.575);}
+.about-me .all-server {
+    width: 33%;
+    height: 350px;
+    border: 1px solid #CFCFCF;
+    float: left;
+    margin-top: 20px;
+    margin-left: 8%;
+}
+
+.about-me .all-server:hover {
+    border: 1px solid rgba(0, 0, 0, 0.575);
+}
+
 
 /* Start sub server */
 
-.about-me .sub-server-1 {width:90%;height:75px;border-bottom:3px solid rgb(46, 196, 41);margin-left: 14px;float: left;}
+.about-me .sub-server-1 {
+    width: 90%;
+    height: 75px;
+    border-bottom: 3px solid rgb(46, 196, 41);
+    margin-left: 14px;
+    float: left;
+}
 
-.about-me .sub-server-1 h2 { margin-top: 0;margin-left: 50px; font-size: 22px;}
+.about-me .sub-server-1 h2 {
+    margin-top: 0;
+    margin-left: 50px;
+    font-size: 22px;
+}
 
-.about-me .sub-server-1 .sub-img{float: left;width:50px;margin-top: -70px;}
+.about-me .sub-server-1 .sub-img {
+    float: left;
+    width: 50px;
+    margin-top: -70px;
+}
 
-.about-me .sub-server-1 img{max-width: 100%;}
+.about-me .sub-server-1 img {
+    max-width: 100%;
+}
 
-.about-me .sub-server h2 { margin-top: 0;margin-left: 50px;padding-top: 30px;color:#FFF;font-size: 21px;}
+.about-me .sub-server h2 {
+    margin-top: 0;
+    margin-left: 50px;
+    padding-top: 30px;
+    color: #FFF;
+    font-size: 21px;
+}
 
-.about-me .server .sub-server .sub-img{float: left;width:50px;margin-top: -65px;}
-.about-me  .server .sub-server img{max-width: 100%;}
+.about-me .server .sub-server .sub-img {
+    float: left;
+    width: 50px;
+    margin-top: -65px;
+}
 
-.about-me .all-server .sub-server .sub-img{float: left;width:50px;margin-top: -65px;}
-.about-me  .all-server .sub-server img{max-width: 100%;}
+.about-me .server .sub-server img {
+    max-width: 100%;
+}
 
-.about-me .sub-server {height:75px;background-color: #C00000;}
+.about-me .all-server .sub-server .sub-img {
+    float: left;
+    width: 50px;
+    margin-top: -65px;
+}
+
+.about-me .all-server .sub-server img {
+    max-width: 100%;
+}
+
+.about-me .sub-server {
+    height: 75px;
+    background-color: #C00000;
+}
+
 
 /* End sub server */
 
+
 /* Start ul list */
 
-.about-me  .storage >ul {
-margin: 0;
-list-style-type: none;
-padding-left: 60px;
-}
-.about-me  .storage > ul li {
-    padding :10px;
+.about-me .storage>ul {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 60px;
 }
 
-.about-me  ul li  .stor{ text-decoration: none; padding-left: 15px ; }
-.about-me  ul li  a{ text-decoration: none; color:  #444; }
+.about-me .storage>ul li {
+    padding: 10px;
+}
 
+.about-me ul li .stor {
+    text-decoration: none;
+    padding-left: 15px;
+}
 
+.about-me ul li a {
+    text-decoration: none;
+    color: #444;
+}
 
-.about-me  .server >ul {
+.about-me .server>ul {
     margin: 0;
     margin-top: -5px;
     list-style-type: none;
     padding-left: 50px;
-    }
-    .about-me  .server > ul li {
-        padding :10px;
-    }
+}
 
-    
-    .about-me  .all-server >ul {
-        margin: 0;
-        margin-top: -5px;
-        list-style-type: none;
-        padding-left: 50px;
-        }
-        .about-me  .all-server > ul li {
-            padding :10px;
-    }
+.about-me .server>ul li {
+    padding: 10px;
+}
+
+.about-me .all-server>ul {
+    margin: 0;
+    margin-top: -5px;
+    list-style-type: none;
+    padding-left: 50px;
+}
+
+.about-me .all-server>ul li {
+    padding: 10px;
+}
+
 
 /* End ul list */
-
-        
 
 
 /* <!-- End All Server --> */
 
 
 /* End Content */
-

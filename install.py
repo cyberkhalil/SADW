@@ -1,10 +1,10 @@
 #!/bin/python3
-from lib import manage_distro, util, manage_network
+from lib import manage_distro, manage_network, util
 
 ip = input('Enter your static ip ['+manage_network.get_IP()+']:')
 if not ip:
     ip = manage_network.get_IP()
-manage_network.set_IP('enp0s3', ip)
+manage_network.set_IP('enp0s3', ip,24)
 
 host = input('Enter host name ['+util.get_hostname()+']:')
 if not host:

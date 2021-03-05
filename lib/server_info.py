@@ -1,6 +1,6 @@
 import psutil
 from cpuinfo import get_cpu_info
-from psutil import virtual_memory, disk_usage
+from psutil import disk_usage, virtual_memory
 
 
 def get_processor():

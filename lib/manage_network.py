@@ -16,8 +16,9 @@ def getAllInterfaces():
 def iface_isup(iface):
     return psutil.net_if_stats()[iface][0]
 
-def get_IP(iface='enp0s3'):
+def get_IP(iface='wlo1'):
     return psutil.net_if_addrs()[iface][0][1]
+
 
 
 # check if valid ip in network

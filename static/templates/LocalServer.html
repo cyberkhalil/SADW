@@ -1,4 +1,4 @@
-{% extends "baseLayout.html" %} {% block content %}
+{% extends "/baseLayout/baseLayout.html" %} {% block content %}
 <!-- Start Content -->
 
 <head>
@@ -11,7 +11,7 @@
             <div class="dept">
                 <ul>
                     <li><i class="fa fa-list-alt" aria-hidden="true" style="padding-right: 7px;"></i>
-                        <a href="/">Dashboard</a></li>
+                        <a href="/">Dashpoard</a></li>
                     <li><i class="fa fa-server" aria-hidden="true" style="padding-right: 7px;"></i>
                         <a href="/ServerManager/LocalServer">Local Server</a></li>
                     <li><i class="fa fa-list" aria-hidden="true" style="padding-right: 7px;"></i>
@@ -31,7 +31,7 @@
     <div class="info">
         <div class="icon-info"><img src="/static/images/55.png"></div>
         <h2>Properties</h2>
-        <p>for WIN-DTJA6RO2SUS</p>
+        <p>for {{hostname}}</p>
 
         <!-- Start Properties -->
         <div class="properties">
@@ -67,7 +67,7 @@
 
                 <div class="prop-values">
                     <ul>
-                        <li><a href="#">DC01</a></li>
+                        <li><a href="#">{{hostname}}</a></li>
                         <li>dc01.pc</li>
                     </ul>
                     <br><br><br><br>
@@ -76,12 +76,12 @@
                         <li><a href="#">Enabled</a></li>
                         <li><a href="#">Disabled</a></li>
                         <li><a href="#">Enabled</a></li>
-                        <li><a href="#">10.0.2.15, IPv6 enabled</a></li>
+                        <li><a href="#">{{ip}}</a></li>
                     </ul>
 
                     <br><br>
                     <ul>
-                        <li>MS Server 2012 R2</li>
+                        <li>{{osversion}}</li>
                         <li>VirtualBox</li>
                     </ul>
 
@@ -128,14 +128,14 @@
                         <li><a href="#">Off</a></li>
                         <li><a href="#">Not participting</a></li>
                         <li><a href="#">On</a></li>
-                        <li>(UtC-08:00)Pacufuc Time(US&Canada)</li>
+                        <li>{{timezone}}</li>
                     </ul>
 
                     <br><br>
                     <ul>
-                        <li> {{cpu}}</li>
-                        <li>{{ram}}</li>
-                        <li>{{disk}}</li>
+                        <li>{{cpu}}</li>
+                        <li>{{ram}} G</li>
+                        <li>{{disk}} G</li>
                     </ul>
 
                 </div>
@@ -146,7 +146,7 @@
 
         </div>
     </div>
-</div>
 
+</div>
 <!-- End Content -->
 {% endblock %}

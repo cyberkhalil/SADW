@@ -1,10 +1,9 @@
 import os
-import socket
-import struct
 from shutil import copyfile
 
 
 def get_hostname():
+    import socket
     return socket.gethostname()
 
 

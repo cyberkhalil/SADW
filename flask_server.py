@@ -1,13 +1,11 @@
 #!/bin/python3
 from flask import Flask
-from flask_script import Manager
 
 from webscripts.ServerManager import *
 
 app = Flask(__name__,
             template_folder='static/templates',  # static imgs/html/css
             static_folder='static')  # entire static
-manager = Manager(app)
 
 
 # the 'ServerManager' directory in server

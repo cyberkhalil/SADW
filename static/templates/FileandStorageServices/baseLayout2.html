@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/FileandStorageServices.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+
+    <title>Inspire</title>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <div class="header">
+
+        <div class="navbar">
+            <div class="container">
+                <div class="nav-img">
+                    <div class="page-next">
+                        <i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i>
+                    </div>
+
+                </div>
+                <!-- Start Navbar of list -->
+
+                <ul>
+                    <li><a href="#">Manage</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">View</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+
+                <!-- End Navbar of list -->
+
+
+
+                <div class="search">
+                    <input type="text" id="lname" name="lname"><br><br>
+                </div>
+
+                <!-- here the images after search -->
+                <i class="fa fa-caret-down" aria-hidden="true"
+                    style=" width:20px ;margin-top: 40px; margin-left: 15px;border-right: 1px solid rgb(245, 241, 241);"></i>
+                <i class="fa fa-caret-down" aria-hidden="true" style="margin-top: 40px;"></i>
+                <!-- End  the images after search -->
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- End Header -->
+
+    <!-- Start Content -->
+
+    <div class="about-me">
+        <div class="container">
+
+            <!--Start The right Side Deparment  -->
+            <div class="department">
+                <div class="dept">
+                    <dev class="first_dept">
+                        <ul>
+                            <li class="active"><i class="fa fa-list-alt" aria-hidden="true" style="padding-right: 7px;"></i>
+                            <li><i class="fa fa-server" aria-hidden="true" style="padding-right: 7px;"></i>
+                            <li><i class="fa fa-list" aria-hidden="true" style="padding-right: 7px;"></i>
+                            <li><i class="fa fa-file" aria-hidden="true" style="padding-right: 7px;"></i>
+                        </ul>
+                    </dev>
+                    <ul class="sec_dept">
+                        <li class="active"> <a  href="#">Servers</a></li>
+                        <li><a href="#">Volums</a></li>
+                        <li><a href="#">Shares</a></li>
+                        <li><a href="#">ISCSI</a></li>
+                        <li><a href="#">Work Folders</a></li>
+
+                    </ul>
+
+                    
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        
+
+        <!--End The right Side Deparment  -->
+
+
+        <!-- Start Info in Another side -->
+
+    <div class="info">
+            <button class="btn_task">Tasks</button>
+            <div class="config">
+      
+
+            
+       </div>
+    </div>
+
+
+    <!-- End Info in Another side -->
+
+    <!-- End Content -->
+
+    {% block content %} {% endblock %}
+
+
+
+</body>
+
+</html>

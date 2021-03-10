@@ -1,3 +1,4 @@
+#!/bin/python3
 import os
 from shutil import copyfile
 
@@ -105,3 +106,28 @@ def install_pip():
 
 def pip_install_requirements():
     os.system('pip3 install -r requirements.txt')
+
+def fixstring(s,prefix='',suffix=''):
+    s = str(s)
+    if not suffix:
+        out = s[s.index(prefix)+len(prefix):]
+    else:
+        out = s[s.index(prefix)+len(prefix):s.index(suffix)]
+    return out
+
+
+def service_status(service_name):
+    """ to check service status;return 0 if it is not running & return 1 if it's running"""
+    if not service_name:
+        return 0
+    stat = os.system("systemctl is-active --quiet "+service_name)
+    if stat == 0:
+        return 1
+    else:
+        return 0
+
+def get_file_timestamp(file_name):
+    try:
+        return os.path.getctime(file_name)
+    except:
+        return "Never"

@@ -16,7 +16,7 @@ def getAllInterfaces():
 def iface_isup(iface):
     return psutil.net_if_stats()[iface][0]
 
-def get_IP(iface='wlo1'):
+def get_IP(iface='enp0s3'):
     return psutil.net_if_addrs()[iface][0][1]
 
 
@@ -52,6 +52,7 @@ def is_valid_ipv6_address(address):
     except socket.error:  # not a valid address
         return False
     return True
+
 '''
 TODO: set ip
 
@@ -75,4 +76,5 @@ def set_IP(ifname='enp0s3',address='172.24.6.88',mask=16):
 """
 ## Testing 
 print(get_IP())
+# set_IP('wlo1','192.168.1.112',24)
 """

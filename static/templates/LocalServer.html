@@ -68,21 +68,21 @@
                 <div class="prop-values">
                     <ul>
                         <li><a href="#">{{hostname}}</a></li>
-                        <li>dc01.pc</li>
+                        <li>{{server_dn}}</li>
                     </ul>
                     <br><br><br><br>
                     <ul>
-                        <li><a href="#">Private:On</a></li>
-                        <li><a href="#">Enabled</a></li>
-                        <li><a href="#">Disabled</a></li>
-                        <li><a href="#">Enabled</a></li>
+                        <li><a href="#">{{firewall_status}}</a></li>
+                        <li><a href="#">{{rm_status}}</a></li>
+                        <li><a href="#">{{rdp_status}}</a></li>
+                        <li><a href="#">{{nict_status}}</a></li>
                         <li><a href="#">{{ip}}</a></li>
                     </ul>
 
                     <br><br>
                     <ul>
                         <li>{{osversion}}</li>
-                        <li>VirtualBox</li>
+                        <li>{{hw_information}}</li>
                     </ul>
 
                 </div>
@@ -119,14 +119,14 @@
 
                 <div class="prop-values">
                     <ul>
-                        <li><a href="#">Never</a></li>
+                        <li><a href="#">{{li_updates}}</a></li>
                         <li><a href="#">Off</a></li>
                     </ul>
                     <br><br><br><br>
                     <ul>
-                        <li><a href="#">Never</a></li>
-                        <li><a href="#">Off</a></li>
-                        <li><a href="#">Not participting</a></li>
+                        <li><a href="#">{{lc_updates}}</a></li>
+                        <li><a href="#">{{error_reporting_status}}</a></li>
+                        <li><a href="#">{{ceip_status}}</a></li>
                         <li><a href="#">On</a></li>
                         <li>{{timezone}}</li>
                     </ul>

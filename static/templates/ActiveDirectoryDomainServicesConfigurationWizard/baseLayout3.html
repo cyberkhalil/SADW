@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/ActiveDirectoryDomainServicesConfigurationWizard.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <title>Active Directory Domain Services Configuration Wizard</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/ActiveDirectoryDomainServicesConfigurationWizard.css">
+
 </head>
+
 <body>
     <div class="header">
         <div class="container">
-        <div class="address"> <h1>The Name Of Page</h1> </div>
-        <div class="target"> 
-        <h2>Target Server</h2> 
-        <h3>WIN-OP1QSJLDHR</h3> 
+            <div class="address">
+                <h1>The Name Of Page</h1>
+            </div>
+            <div class="target">
+                <h2>Target Server</h2>
+                <h3>WIN-OP1QSJLDHR</h3>
+            </div>
         </div>
+    </div>
+
+    <!-- Start Department -->
+    <div class="content">
+        <div class="department">
+            <div class="container">
+                <ul>
+                    <li><a>Deployment Configuration</a></li>
+                    <li><a>Domain Controller Option</a> </li>
+                    <li><a>Additional Option </a></li>
+                    <li><a>Paths</a></li>
+                    <li><a>Review Options</a></li>
+                    <li><a>Prerequisites check</a></li>
+                    <li><a>Installation</a></li>
+                    <li><a>Results</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- End Department -->
+
+
+
+        {% block content %} {% endblock %}
+
+
+
+
+        <!-- Footer -->
+
+        <div class="details">
+            <div class="container">
+
+
+                <div class="more-info">
+                    <a href="#">More about additinal options</a>
+                </div>
+
+
+            </div>
+
+            <div class="container">
+                <div class="option">
+                    <div class="opt">
+                        <button> &lt; Previous </button>
+                        <button> Next &gt;</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                        <button>Install</button>
+                        <button>Cancell</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+    <!-- End Footer -->
 
-<!-- Start Department -->
-<div class="content">
- <div class="department">
-     <div class="container">
-         <ul>
-             <li><a>Deployment Configuration</a></li>
-             <li><a>Domain Controller Option</a> </li>
-             <li><a>Additional Option </a></li>
-             <li><a>Paths</a></li>
-             <li><a>Review Options</a></li>
-             <li><a>Prerequisites check</a></li>
-             <li><a>Installation</a></li>
-             <li><a>Results</a></li>
-         </ul>
-      </div>
-      
- 
- </div>
-<!-- End Department -->
-
-
-
-{% block content %} {% endblock %}
-
-
-
-
-<!-- Footer -->
-
-<div class="details">
-    <div class="container">
-       
-       
-         <div class="more-info">
-          <a href="#">More about additinal options</a> 
-         </div>
-
-        
-    </div>
-
-<div class="container">
-    <div class="option">
-        <div class="opt">
-     <button> &lt; Previous </button>
-     <button> Next &gt;</button>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-     <button>Install</button>
-     <button>Cancell</button>
-    </div>
-    </div>
-</div> 
-
-</div>
-</div>
-<!-- End Footer -->
- 
 
 
 </body>
+
 </html>
-
-

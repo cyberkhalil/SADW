@@ -1,45 +1,59 @@
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
+
 
 /*Start Main Rulez */
 
 body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F8F8F8; 
+    background-color: #F8F8F8;
     line-height: 1.5;
     color: #555;
 }
 
-
 .container {
-    width :100%;
+    width: 100%;
     margin: auto;
 }
 
-.clearfix{clear:both;}
+.clearfix {
+    clear: both;
+}
+
 
 /*End Main Rulez */
 
+
 /* Start Header */
 
-
-.header .navbar{
+.header .navbar {
     background-color: #414141;
     color: #FFF;
     overflow: hidden;
 }
 
-
-.header .page-next { width: 170px; float:left; margin-top: 25px;margin-left:15px}
+.header .page-next {
+    width: 170px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 15px
+}
 
 .header .search {
     padding-top: 25px;
     float: left;
 }
 
-.header  input { width: 700px; height: 40px;}
+.header input {
+    width: 700px;
+    height: 40px;
+}
 
-.header .search img { max-width: 4%;}
+.header .search img {
+    max-width: 4%;
+}
 
 .header .navbar ul {
     list-style: none;
@@ -48,16 +62,20 @@ body {
     float: right;
 }
 
-.header .navbar ul li { float: left; padding:10px;}
-
-.header .navbar ul li a { color:#FFF; text-decoration: none;}
-
-.header .navbar ul li.active a, .header .navbar ul li a:hover {
-    color: #2ecc71;
+.header .navbar ul li {
+    float: left;
+    padding: 10px;
 }
 
+.header .navbar ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
 
-
+.header .navbar ul li.active a,
+.header .navbar ul li a:hover {
+    color: #2ecc71;
+}
 
 
 /* End Header */
@@ -65,51 +83,86 @@ body {
 
 /* Start Content */
 
-.about-me .department { float: left; width: 20%; border-right: 2px solid #CFCFCF;height: 1300px;overflow: hidden;}
-.about-me .department .first_dept { float: left; width: 20%; border-right: 2px solid #CFCFCF;height: 1300px;overflow: hidden;margin-top:-17px;}
-.about-me .department .first_dept ul{float: right;margin-right: 20%;} 
+.about-me .department {
+    float: left;
+    width: 20%;
+    border-right: 2px solid #CFCFCF;
+    height: 1300px;
+    overflow: hidden;
+}
 
-.about-me .department .sec_dept{margin-left: 10%;}
+.about-me .department .first_dept {
+    float: left;
+    width: 20%;
+    border-right: 2px solid #CFCFCF;
+    height: 1300px;
+    overflow: hidden;
+    margin-top: -17px;
+}
 
-.about-me .department ul {list-style-type: none;}
-.about-me .department ul li {padding-bottom:10px;}
-.about-me .department ul li:hover {color: rgb(16, 27, 92);}
-.about-me .department ul li a:hover {color: rgb(16, 27, 92);}
+.about-me .department .first_dept ul {
+    float: right;
+    margin-right: 20%;
+}
 
-.about-me .department ul li a {text-decoration: none; color:rgba(0, 0, 0, 0.623)}
+.about-me .department .sec_dept {
+    margin-left: 10%;
+}
 
-.about-me .department ul li.active a  {   
-color: #1abc9c ;  
-border-bottom: 2px solid #1abc9c;
+.about-me .department ul {
+    list-style-type: none;
+}
 
+.about-me .department ul li {
+    padding-bottom: 10px;
+}
+
+.about-me .department ul li:hover {
+    color: rgb(16, 27, 92);
 }
 
 .about-me .department ul li a:hover {
-    color: #1abc9c ; 
-    border-bottom: 2px solid #1abc9c;
-
+    color: rgb(16, 27, 92);
 }
 
+.about-me .department ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.623)
+}
+
+.about-me .department ul li.active a {
+    color: #1abc9c;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.about-me .department ul li a:hover {
+    color: #1abc9c;
+    border-bottom: 2px solid #1abc9c;
+}
 
 
 /* Start Info */
 
+.about-me .info {
+    float: left;
+    width: 80%;
+    overflow: hidden;
+}
 
-.about-me .info { float: left; width: 80%;overflow: hidden;}
-
-.about-me .info button {float: right;margin-right: 8%;margin-top: 3%;}
+.about-me .info button {
+    float: right;
+    margin-right: 8%;
+    margin-top: 3%;
+}
 
 .about-me .config {
-     width:85%;
-      height:368px;
-     border:1px solid #AFAFAF;
-     background-color: rgba(255, 255, 255, 0.986);
-     margin:auto;
-     margin-top: 80px;
-     }
-
-
+    width: 85%;
+    height: 368px;
+    border: 1px solid #AFAFAF;
+    background-color: rgba(255, 255, 255, 0.986);
+    margin: auto;
+    margin-top: 80px;
+}
 
 
 /* End Content */
-

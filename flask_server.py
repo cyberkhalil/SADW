@@ -1,203 +1,58 @@
 #!/bin/python3
-from flask import Flask
+from flask import Flask, render_template
 
-from webscripts.ServerManager import *
+from routes import routes
+
+template_path = 'static/templates'
 
 app = Flask(__name__,
-            template_folder='static/templates',  # static imgs/html/css
+            template_folder=template_path,  # static imgs/html/css
             static_folder='static')  # entire static
 
 
 # the 'ServerManager' directory in server
-sm_path = '/ServerManager/'
+sm_path = '/ServerManager'
+
+from lib.manage_network import get_IP
+from lib.server_info import (disk_total_space, get_ceip, get_error_reporting,
+                             get_firewall_status, get_hostname,
+                             get_last_checked_updates,
+                             get_last_installed_updates, get_NICT_status,
+                             get_osversion, get_peripheral_hw_info,
+                             get_processor, get_rdp_status,
+                             get_remote_management_status, get_server_dn,
+                             get_time_zone, get_total_ram)
 
 
-@app.route(sm_path+'Login')
-def Login_page():
-    """the /ServerManager/Login page which is responsible
-     of authenticate the user of the app."""
-    # TODO Login (user,pass) from POST
-    return Login.load_page()
-
-
-@app.route('/')  # TODO redirect instead of route
-@app.route(sm_path)  # TODO redirect instead of route
-@app.route(sm_path+'Dashboard')
+@app.route(sm_path+'/')
+@app.route('/')
 def Dashboard_page():
-    """the /ServerManager/Dashboard page is Default site 
-    of the app."""
-    return Dashboard.load_page()
+    return render_template('Dashboard.html')
 
-
-@app.route(sm_path+'AllServers')
-def AllServers_page():
-    """the /ServerManager/AllServers page contains all servers information."""
-    return AllServers.load_page()
-
-
-@app.route(sm_path+'LocalServer')
+@app.route(sm_path+'/LocalServer')
+@app.route(sm_path+'/LocalServer.html')
 def LocalServer_page():
-    """the /ServerManager/LocalServer page contains local server information."""
-    return LocalServer.load_page()
+    cpu = get_processor()
+    ram = get_total_ram()
+    disk = disk_total_space('/')
+    hostname = get_hostname()
+    ipaddress= get_IP('wlo1')
+    osversion = get_osversion()
+    timezone= get_time_zone()
+    server_dn = get_server_dn()
+    firewall_status = get_firewall_status()
+    nict_status = get_NICT_status()
+    rdp_status = get_rdp_status()
+    rm_status = get_remote_management_status()
+    ceip_status = get_ceip()
+    error_reporting_status=get_error_reporting()
+    li_updates=str(get_last_installed_updates())
+    lc_updates=str(get_last_checked_updates())
+    hw_information = get_peripheral_hw_info()
 
+    return render_template('LocalServer.html',cpu=cpu,ram=ram,disk=disk,hostname=hostname,ip=ipaddress,osversion=osversion,timezone=timezone,server_dn=server_dn,firewall_status=firewall_status,nict_status=nict_status,rdp_status=rdp_status,rm_status=rm_status,ceip_status=ceip_status,error_reporting_status=error_reporting_status,li_updates=li_updates,lc_updates=lc_updates,hw_information=hw_information)
 
-# the 'ServerManager/ActiveDirectoryDomainServicesConfigurationWizard' directory in server
-addscw_path = sm_path+'ActiveDirectoryDomainServicesConfigurationWizard/'
-
-
-@app.route(addscw_path)  # TODO redirect instead of route
-@app.route(addscw_path+'DeploymentConfigurations')
-def DeploymentConfigurations_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/DeploymentConfigurations page is the first page in the wizard."""
-    return DeploymentConfigurations.load_page()
-
-
-@app.route(addscw_path+'AdditionalOptions')
-def AdditionalOptions_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/AdditionalOptions page is a page in the wizard."""
-    return AdditionalOptions.load_page()@app.route(addscw_path+'AdditionalOptions')
-
-@app.route(addscw_path+'DomainControllerOptions')
-def DomainControllerOptions_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/DomainControllerOptions page is a page in the wizard."""
-    return DomainControllerOptions.load_page()
-
-
-@app.route(addscw_path+'DNSOptions')
-def DNSOptions_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/DNSOptions page is a page in the wizard."""
-    return DNSOptions.load_page()
-
-
-@app.route(addscw_path+'Installation')
-def Installation_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/Installation page is a page in the wizard."""
-    return Installation.load_page()
-
-
-@app.route(addscw_path+'Paths')
-def Paths_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/Paths page is a page in the wizard."""
-    return Paths.load_page()
-
-
-@app.route(addscw_path+'PrerequisitesCheck')
-def PrerequisitesCheck_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/PrerequisitesCheck page is a page in the wizard."""
-    return PrerequisitesCheck.load_page()
-
-
-@app.route(addscw_path+'ReviewOptions')
-def ReviewOptions_page():
-    """the /ServerManager/ActiveDirectoryDomainServicesConfigurationWizard/ReviewOptions page is a page in the wizard."""
-    return ReviewOptions.load_page()
-
-
-# the 'ServerManager/AddRolesandFeturesWizard' directory in server
-arfw_path = sm_path+'AddRolesandFeturesWizard/'
-
-
-@app.route(arfw_path)  # TODO redirect instead of route
-@app.route(arfw_path+'Beforeyoubegin')
-def Beforeyoubegin_page():
-    """the /ServerManager/AddRolesandFeturesWizard/Beforeyoubegin page is a page in the wizard."""
-    return Beforeyoubegin.load_page()
-
-
-@app.route(arfw_path+'ADLDS')
-def ADLDS_page():
-    """the /ServerManager/AddRolesandFeturesWizard/ADLDS page is a page in the wizard."""
-    return ADLDS.load_page()
-
-
-@app.route(arfw_path+'Confirmation')
-def Confirmation_page():
-    """the /ServerManager/AddRolesandFeturesWizard/Confirmation page is a page in the wizard."""
-    return Confirmation.load_page()
-
-
-@app.route(arfw_path+'DNSServer')
-def DNSServer_page():
-    """the /ServerManager/AddRolesandFeturesWizard/DNSServer page is a page in the wizard."""
-    return DNSServer.load_page()
-
-
-@app.route(arfw_path+'Features')
-def Features_page():
-    """the /ServerManager/AddRolesandFeturesWizard/Features page is a page in the wizard."""
-    return Features.load_page()
-
-
-@app.route(arfw_path+'InstallationType')
-def InstallationType_page():
-    """the /ServerManager/AddRolesandFeturesWizard/InstallationType page is a page in the wizard."""
-    return InstallationType.load_page()
-
-
-@app.route(arfw_path+'Result')
-def Result_page():
-    """the /ServerManager/AddRolesandFeturesWizard/Result page is a page in the wizard."""
-    return Result.load_page()
-
-
-@app.route(arfw_path+'ServerRoles')
-def ServerRoles_page():
-    """the /ServerManager/AddRolesandFeturesWizard/ServerRoles page is a page in the wizard."""
-    return ServerRoles.load_page()
-
-
-@app.route(arfw_path+'ServerSelection')
-def ServerSelection_page():
-    """the /ServerManager/AddRolesandFeturesWizard/ServerSelection page is a page in the wizard."""
-    return ServerSelection.load_page()
-
-
-# the 'ServerManager/FileandStorageServices' directory in server
-fass_path = sm_path + 'FileandStorageServices/'
-
-
-@app.route(fass_path)  # TODO redirect instead of route
-@app.route(fass_path+'Servers')
-def Servers_page():
-    """the /ServerManager/FileandStorageServices/Servers page is the page of servers storages."""
-    return Servers.load_page()
-
-
-@app.route(fass_path+'Disks')
-def Disks_page():
-    """the /ServerManager/FileandStorageServices/Disks page is the page of servers disks."""
-    return Disks.load_page()
-
-
-@app.route(fass_path+'iSCSI')
-def iSCSI_page():
-    """the /ServerManager/FileandStorageServices/Disks page is the page of servers iSCSI."""
-    return iSCSI.load_page()
-
-
-@app.route(fass_path+'Shares')
-def Shares_page():
-    """the /ServerManager/FileandStorageServices/Shares page is the page of servers Shares."""
-    return Shares.load_page()
-
-
-@app.route(fass_path+'StoragePools')
-def StoragePools_page():
-    """the /ServerManager/FileandStorageServices/StoragePools page is the page of servers StoragePools."""
-    return StoragePools.load_page()
-
-
-@app.route(fass_path+'Volumes')
-def Volumes_page():
-    """the /ServerManager/FileandStorageServices/Volumes page is the page of servers Volumes."""
-    return Volumes.load_page()
-
-
-@app.route(fass_path+'WorkFolders')
-def WorkFolders_page():
-    """the /ServerManager/FileandStorageServices/WorkFolders page is the page of servers WorkFolders."""
-    return WorkFolders.load_page()
-
+routes.template_route(app,sm_path,template_path)
 
 if __name__ == '__main__':
     app.run(debug=True)

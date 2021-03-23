@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 from routes import routes
 
-template_path = 'static/templates'
+template_path = 'templates'
 
 app = Flask(__name__,
             template_folder=template_path,  # static imgs/html/css
@@ -54,5 +54,7 @@ def LocalServer_page():
 
 routes.template_route(app,sm_path,template_path)
 
+print(app.url_map)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",debug=True)

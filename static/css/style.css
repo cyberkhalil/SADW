@@ -125,6 +125,8 @@ body {
 
 .about-me .info>h2 {
     margin-left: 77px;
+    text-transform: uppercase;
+    color: #836e6e
 }
 
 .about-me .config {
@@ -388,6 +390,16 @@ h2 a {
     padding-top: 30px;
     color: #FFF;
     font-size: 21px;
+}
+
+.sub-img {
+    width: 50px;
+    height: 100%;
+}
+
+.sub-img>img {
+    width: 40px;
+    height: 30px;
 }
 
 .about-me .server .sub-server .sub-img {

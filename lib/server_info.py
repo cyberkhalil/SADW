@@ -13,7 +13,6 @@ def get_osversion():
     except:
         return "module platform not found"
 
-
 def get_server_dn():
     try:
         proc = Popen(["samba-tool","computer","show",get_hostname()], stdout=PIPE)

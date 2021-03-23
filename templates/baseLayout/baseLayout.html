@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>{% block title %}{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,8 +37,6 @@
 
                 <!-- End Navbar of list -->
 
-
-
                 <div class="search">
                     <input type="text" id="lname" name="lname"><br><br>
                 </div>
@@ -52,7 +51,6 @@
     </div>
     </div>
     <!-- End Header -->
-
 
     {% block content %} {% endblock %}
 

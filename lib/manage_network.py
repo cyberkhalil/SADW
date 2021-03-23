@@ -19,10 +19,7 @@ def iface_isup(iface):
 def get_IP(iface='enp0s3'):
     return psutil.net_if_addrs()[iface][0][1]
 
-
-
 # check if valid ip in network
-
 def is_in_network(ip,network):
     import ipaddress
     if not(is_valid_ipv6_address(ip)) and not(is_valid_ipv4_address(ip)):
@@ -31,7 +28,7 @@ def is_in_network(ip,network):
     ip = ipaddress.ip_address(ip)
     return ip in net
 
-
+# check if the ipv4 is valid
 def is_valid_ipv4_address(address):
     try:
         socket.inet_pton(socket.AF_INET, address)
@@ -64,7 +61,6 @@ def set_IP(iface, ip, mask='24'):
         ipdb.interfaces.enp0s3.add_ip(ip+'/'+mask)
     ipdb.release()
 '''
-
 
 def set_IP(ifname='enp0s3',address='172.24.6.88',mask=16):
     from pyroute2 import IPRoute

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Roles and Fetures Wizard</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/AddRolesandFeturesWizard.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="address">
+                <h1>(AD LDS)</h1>
+            </div>
+            <div class="target">
+                <h2>Target Server</h2>
+                <h3>WIN-OP1QSJLDHR</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Department -->
+    <div class="content">
+        <div class="department">
+            <div class="container">
+                <ul>
+                    <li><a>Before You Begin</a></li>
+                    <li><a>Installation Type</a> </li>
+                    <li><a>Server Selection</a></li>
+                    <li><a>Server Roles</a></li>
+                    <li><a>Features</a></li>
+                    <li><a>AD LDS</a></li>
+                    <li><a>DNS Server</a></li>
+                    <li><a>Confirmation</a></li>
+                    <li><a>Results</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- End Department -->
+
+
+
+
+        {% block content %} {% endblock %}
+
+
+
+
+
+        <!-- Footer -->
+        <div class="details">
+
+            <div class="container">
+                <div class="option">
+                    <div class="opt">
+                        <button> &lt; Previous </button>
+                        <button> Next &gt;</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                        <button>Install</button>
+                        <button>Cancell</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- End Footer -->
+
+
+
+</body>
+
+</html>

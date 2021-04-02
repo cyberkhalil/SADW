@@ -3,4 +3,26 @@
 <head>
     <title>DeploymentConfigurations</title>
 </head>
-{% block content %} {% endblock %}
+{% block content %}
+<div class="container">
+    <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label>Select the deployment operation</label>
+    <br>
+    <input type="radio" name=".." value=".." checked> Add a domain controller to an existing domain </br>
+    <input type="radio" name=".." value=".."> Add a new domain to an existing forest </br>
+    <input type="radio" name=".." value=".."> Add a new forest </br>
+
+    <br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specify the domain information for this operation </p>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domain:
+    <input type="text" class="tr"> <button>Select ..</button>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Supply the cradentials to perform this operation </p>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;No cradentials provided&gt; </p>
+
+    <div class="change"> <button>Change</button> </div>
+
+</div>
+{% endblock %}

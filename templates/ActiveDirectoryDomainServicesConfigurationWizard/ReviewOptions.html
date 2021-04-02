@@ -3,4 +3,34 @@
 <head>
     <title>ReviewOptions</title>
 </head>
-{% block content %} {% endblock %}
+{% block content %}
+<div class="container">
+
+    <div class="desc">
+        <p> Review your selections: </p>
+    </div>
+    <div class="info">
+        <p>Configure this server as the first Active Directory domain controller in a new forest. </p>
+        <p>The new domain name is "example.com". This is also the name of the new forest. </p>
+        <p>The NetBIOS name of the domain: EXAMPLE</p>
+        <p> Forest Functional Level: Windows Server 2012 R2</p>
+        <p> Domain Functional Level: Windows Server 2012 R2 </p>
+        <p>Additional Options: </p>
+        <p>&nbsp; Global catalog: Yes.</p>
+        <p>&nbsp; DNS Server: Yes </p>
+        <p> &nbsp; Create DNS Delegation: No </p>
+        <p>Database folder: C:\Windows\NTDS</p>
+        <p>Log file folder: C:/Windows\NTDS</p>
+        <p> SYSVOL folder: C:/Windows\SYSVOL </p>
+        <p>The DNS Server service will be configured on this computer. </p>
+        <p>This computer will be configured to use this DNS server as its preferred DNS server. </p>
+        <p>The password of the new domain Administrator will be the same as the password of the local Administrator of this computer.</p>
+
+
+    </div>
+    <div class="view">
+        <p> These settings can be exported to a Windows PowerShell script to automate additional installations </p>
+        <button>View script</button>
+    </div>
+</div>
+{% endblock %}

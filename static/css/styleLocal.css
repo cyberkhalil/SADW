@@ -137,8 +137,13 @@ body {
 .about-me .properties {
     width: 95%;
     margin-left: 3%;
-    height: 550px;
+    height: 450px;
     border: 1px solid #CFCFCF;
+}
+
+.about-me .properties:hover {
+    background-color: #FFF;
+    border: 2px solid black;
 }
 
 .about-me .properties .prop-1 {
@@ -171,10 +176,6 @@ body {
 
 .about-me .properties ul {
     list-style-type: none;
-}
-
-.prop-values ul li a {
-    text-decoration: none;
 }
 
 

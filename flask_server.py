@@ -39,7 +39,7 @@ def LocalServer_page():
     ram = get_total_ram()
     disk = disk_total_space('/')
     hostname = get_hostname()
-    ipaddress= get_IP('wlo1')
+    ipaddress= get_IP()
     osversion = get_osversion()
     timezone= get_time_zone()
     server_dn = get_server_dn()
@@ -58,7 +58,7 @@ def LocalServer_page():
 @app.route(addraf_path+'/Confirmation',methods=['POST'])
 def confirm_install():
     import os
-    os.system('./install.py')
+    os.system('python3 default_install.py')
     return redirect(addraf_path+'/Result')
 
 routes.template_route(app,sm_path,template_path)

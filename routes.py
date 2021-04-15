@@ -43,8 +43,8 @@ class routes():
             self.f_html_path = f_html_path
             self.app = app
             
-            @app.route(f_route_path[:-len('.html')],endpoint=f_html_path)
-            @app.route(f_route_path,endpoint=f_html_path)
+            @app.route(f_route_path[:-len('.html')],endpoint=f_html_path,methods=['GET'])
+            @app.route(f_route_path,endpoint=f_html_path,methods=['GET'])
             def load_page():
                 return render_template(html_file)
             
